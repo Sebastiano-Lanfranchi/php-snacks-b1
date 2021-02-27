@@ -6,7 +6,6 @@
   </head>
   <body>
     <?php
-
     $calendar=[];
     $partita1=[
       "squadraO" => "VL Pesaro",
@@ -65,10 +64,25 @@
 
     array_push( $calendar,$partita1, $partita2, $partita3, $partita4, $partita5, $partita6, $partita7, $partita8, $partita9);
         var_dump($calendar);
-
-
-
-
      ?>
+<br>
+     <?php
+         $_GET["name"];
+         $_GET["mail"];
+         $_GET["age"];
+
+         if(strlen($_GET["name"])>= 3 &&
+         strpos($_GET["mail"],"@")== true &&
+         strpos($_GET["mail"],".")== true &&
+         is_numeric($_GET["age"])){
+           echo "Accesso effettuato";
+         }else{
+           echo "Accesso negato";
+         }
+       ?>
+       </body>
+     </html>
+
+
   </body>
 </html>
